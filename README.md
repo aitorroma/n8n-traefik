@@ -9,7 +9,11 @@ En este repositorio realizaremos una implementación de N8N mediante Træfik
 
 ## Configuración
 
+Para hacer funcionar esta versión de n8n con traefik debes instalar primero el contenedor que cree para traefik.
 
+https://github.com/aitorroma/docker-traefik
+
+Una vez desplegado seguir estas instrucciones.
 
 ```sh
 cd /opt
