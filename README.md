@@ -56,7 +56,7 @@ cd /opt/n8n
 docker-compose up -d
 ```
 
-Este comando levantara un contenedor levantara la instancia de n8n en el subdominio marcado con soporte para SSL.
+Este comando levantara la instancia de n8n en el subdominio marcado con soporte para SSL.
 
 ## Actualizaciones automáticas
 
