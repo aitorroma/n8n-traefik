@@ -5,15 +5,19 @@ networks:
         external: true
 
 services:
-  n8n:
+  n8n-hiveagile:
     image: n8nio/n8n:latest
-    container_name: n8n
+    container_name: n8n-hiveagile
     restart: unless-stopped
     env_file: .env
     labels:
+      # Traefik
       traefik.enable: 'true'
       traefik.frontend.rule: "Host:${N8N_HOST}"
       traefik.port: '5678'
+      # Caddy
+      caddy: ${N8N_HOST}
+      caddy.reverse_proxy: "{{upstreams 5678}}"
     expose:
       - "80"
       - "443"
@@ -21,4 +25,4 @@ services:
       - default
       - web
     volumes:
-      -  /opt/n8n/.n8n:/home/node/.n8n
+      -  ./docker-volumes/n8n/data:/home/node/.n8n
