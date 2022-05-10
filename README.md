@@ -58,6 +58,22 @@ docker-compose up -d
 
 Este comando levantara la instancia de n8n en el subdominio marcado con soporte para SSL.
 
+## Hack Google translate
+Añado un comando que permite usar el nodo de comando de sistema para traducir texto de Google sin limites
+Puedes instalarlo con el comando
+
+```
+cd /opt/n8n
+make installtrans
+```
+Podrás usar este comando para traducir texto.
+```
+/usr/bin/translate --brief -t es "HiveAgile, is the best comunity of the world"  -no-auto
+```
+Aquí puedes ver como funciona:
+
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h23wumyhvdj21a20u0abv.jpg)
+
 ## Actualizaciones automáticas
 
 Puedes usar watchtower que actualiza todos los contenedores que estan como latest
