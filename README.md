@@ -72,7 +72,7 @@ Podrás usar este comando para traducir texto.
 ```
 Aquí puedes ver como funciona:
 
-![](https://tva1.sinaimg.cn/large/e6c9d24egy1h23wumyhvdj21a20u0abv.jpg)
+![n8n](https://tva1.sinaimg.cn/large/e6c9d24egy1h23wumyhvdj21a20u0abv.jpg)
 
 ## Actualizaciones automáticas
 
