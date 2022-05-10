@@ -16,7 +16,8 @@ https://github.com/aitorroma/docker-traefik
 Una vez desplegado seguir estas instrucciones.
 
 ```sh
-cd /opt
+mkdir /root/containers
+cd /root/containers
 git clone https://github.com/aitorroma/n8n-traefik.git n8n
 cd n8n
 ```
@@ -24,15 +25,25 @@ cd n8n
 Ajustar las variables del fichero `.env` .
 
 ```
-N8N_HOST=n8n.domain.com
+N8N_HOST=n8n.hiveagile.club
+
 N8N_PROTOCOL=https
-WEBHOOK_TUNNEL_URL=https://n8n.domain.com/
-N8N_BASIC_AUTH_ACTIVE=true
-N8N_BASIC_AUTH_USER=admin
-N8N_BASIC_AUTH_PASSWORD=ChangeMe!
+WEBHOOK_TUNNEL_URL=https://${N8N_HOST}
+WEBHOOK_URL=${WEBHOOK_TUNNEL_URL}
+
 EXECUTIONS_DATA_PRUNE=true
 EXECUTIONS_DATA_MAX_AGE=336
 GENERIC_TIMEZONE=Europe/Madrid
+
+#### SMTP CONFIG #####
+
+N8N_EMAIL_MODE=smtp
+N8N_SMTP_HOST=smtp.eu.mailgun.org
+N8N_SMTP_PORT=465
+N8N_SMTP_USER=user@domain.com
+N8N_SMTP_PASS=lapassword
+N8N_SMTP_SSL=true
+N8N_SMTP_SENDER=user@domain.com
 ```
 
 
@@ -45,34 +56,39 @@ Está será la url que usaras para acceder a tu instancia de N8N, debes apuntar 
 
 Está es la ur que usaras para conectar los webhooks con tu servidor.
 
-### `N8N_BASIC_AUTH_PASSWORD`
+### `SMTP CONFIG`
 
-Está es la contraseña para acceder a tu instancia de n8n.
+Debes configurar las variables de correo electrónico para que funcione el modo multiusuario.
 
 ## Uso
 
 ```sh
-cd /opt/n8n
+cd /root/containers/n8n
 docker-compose up -d
 ```
 
 Este comando levantara la instancia de n8n en el subdominio marcado con soporte para SSL.
 
 ## Hack Google translate
-Añado un comando que permite usar el nodo de comando de sistema para traducir texto de Google sin limites
+
+Añado un comando que permite usar el nodo **Execute Command** para traducir texto de Google sin limites
+
 Puedes instalarlo con el comando
 
 ```
 cd /opt/n8n
 make installtrans
 ```
+
 Podrás usar este comando para traducir texto.
+
 ```
 /usr/bin/translate --brief -t es "HiveAgile, is the best comunity of the world"  -no-auto
 ```
+
 Aquí puedes ver como funciona:
 
-![n8n](https://tva1.sinaimg.cn/large/e6c9d24egy1h23wumyhvdj21a20u0abv.jpg)
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h23x0vgp49j21a20u0gnf.jpg)
 
 ## Actualizaciones automáticas
 
@@ -85,15 +101,15 @@ docker run -d \
     containrrr/watchtower n8n
 ```
 
-
-
-
-
 ## Invitación a mi Canal.
 
 Estás invitado a mi canal de telegram, donde publico más soluciones como esta.
 
 ![Telegram-icon](https://tva1.sinaimg.cn/large/008i3skNgy1guctnvd002j600w00w0r202.jpg)https://t.me/aitorroma
+
+## Descubre HiveAgile
+
+Sí te ha gustado este contenedor unete a [HiveAgile.com](https://hiveagile.com) una comunidad sobre OpenSource donde puedes encontrar muchos contenedores de docker listos para usar, democratizando toda la parte técnica para crear tus propios proyectos. 
 
 ----------------------------------------------------------
 
