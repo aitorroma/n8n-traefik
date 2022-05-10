@@ -26,3 +26,4 @@ services:
       - web
     volumes:
       -  ./docker-volumes/n8n/data:/home/node/.n8n
+      - ./bin/trans.sh:/bin/trans.sh
