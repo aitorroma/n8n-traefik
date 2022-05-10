@@ -98,7 +98,7 @@ Puedes usar watchtower que actualiza todos los contenedores que estan como lates
 docker run -d \
     --name watchtower \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    containrrr/watchtower n8n
+    containrrr/watchtower -i 30
 ```
 
 ## Invitación a mi Canal.
