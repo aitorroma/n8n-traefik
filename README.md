@@ -76,7 +76,7 @@ Añado un comando que permite usar el nodo **Execute Command** para traducir tex
 Puedes instalarlo con el comando
 
 ```
-cd /opt/n8n
+cd /root/containers/n8n
 make installtrans
 ```
 
