@@ -1,5 +1,14 @@
 ![image-20210506104427925](https://tva1.sinaimg.cn/large/008i3skNgy1gq8sv4q7cqj303k03kweo.jpg)
 
+<p align="center">
+  <a href="https://github.com/aitorroma/n8n-traefik/master/Readme.md">
+    <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/es.svg" width="30" height="20">
+  </a>
+  <a href="https://github.com/aitorroma/n8n-traefik/master/Readme.IT.md">
+    <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/it.svg" width="30" height="20">
+  </a>
+</p>
+
 ### Che cos'è questo repository?
 
 Questo repository contiene un'implementazione di N8N tramite Træfik.
