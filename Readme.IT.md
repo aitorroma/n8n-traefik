@@ -9,7 +9,7 @@
   </a>
 </p>
 
-### Che cos'è questo repository?
+### ¿Che cos'è questo repository?
 
 Questo repository contiene un'implementazione di N8N tramite Træfik.
 
