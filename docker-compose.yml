@@ -6,7 +6,7 @@ networks:
 
 services:
   n8n-hiveagile:
-    image: n8nio/n8n:latest
+    image: n8nio/n8n:${VERSION}
     container_name: n8n-hiveagile
     restart: unless-stopped
     env_file: .env
