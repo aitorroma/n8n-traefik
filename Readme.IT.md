@@ -33,13 +33,19 @@ Regolare le variabili nel file `.env`.
 ```
 N8N_HOST=n8n.hiveagile.club
 
+## N8N Version
+
+VERSION=latest
+
+## N8N Config
+VUE_APP_URL_BASE_API=https://${N8N_HOST}
 N8N_PROTOCOL=https
-WEBHOOK_TUNNEL_URL=https://${N8N_HOST}
-WEBHOOK_URL=${WEBHOOK_TUNNEL_URL}
+WEBHOOK_URL=https://${N8N_HOST}
 
 EXECUTIONS_DATA_PRUNE=true
 EXECUTIONS_DATA_MAX_AGE=336
 GENERIC_TIMEZONE=Europe/Madrid
+N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
 #### SMTP CONFIG #####
 
